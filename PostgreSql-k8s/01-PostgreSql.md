@@ -140,9 +140,19 @@ The important part is:
 postgres-service
 ```
 
-Kubernetes DNS resolves that service name to the PostgreSQL Pod.
+- Kubernetes DNS resolves that service name to the PostgreSQL Pod.
 
-### Architecture
+## Cross-namespace DNS resolution  
+- Kubernetes DNS lets you access a Service in another namespace using its **fully qualified domain name (FQDN)**:
+  ```
+  <service-name>.<namespace>.svc.cluster.local
+  ```
+- Example:
+  ```
+  postgres-service.database.svc.cluster.local:5432
+  ```
+
+## Architecture
 
 ```text
                 Kubernetes Cluster
