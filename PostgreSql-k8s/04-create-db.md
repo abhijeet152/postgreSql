@@ -6,17 +6,17 @@
     postgres123
     ```
 
-- create db
+- Create db
     ```
     CREATE DATABASE appdb;
     ```
 
-- verify database
+- Verify database
     ```
     \l
     ```
 
-- exit 
+- Exit from pg terminal 
     ```
     \q
     ```
